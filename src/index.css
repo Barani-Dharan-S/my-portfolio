@@ -23,6 +23,21 @@
 }
 
 @layer utilities {
+  @keyframes blob {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(20px, -50px) scale(1.1);
+    }
+    50% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    75% {
+      transform: translate(50px, 50px) scale(1.05);
+    }
+  }
+
   @keyframes bounce-slow {
     0%, 100% {
       transform: translateY(0);
@@ -43,6 +58,10 @@
     }
   }
 
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
   .animate-bounce-slow {
     animation: bounce-slow 3s infinite;
   }
@@ -59,6 +78,10 @@
     animation-delay: 0.4s;
   }
 
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
   .animation-delay-2000 {
     animation-delay: 2s;
   }
@@ -68,6 +91,6 @@
   }
 
   .prose-link {
-    @apply text-cyan-400 hover:text-cyan-300 font-semibold transition-colors;
+    @apply text-slate-400 hover:text-slate-300 font-semibold transition-colors;
   }
 }
