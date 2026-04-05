@@ -67,7 +67,7 @@ export default function App() {
             <a href="#projects" className="px-6 py-3 bg-white hover:bg-gray-100 text-black rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:scale-105">
               View My Work
             </a>
-            <a href={resumePDF} download className="px-6 py-3 bg-teal-600 hover:bg-teal-500 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-600/30 hover:scale-105">
+            <a href={resumePDF} download="BaranidharanS.pdf" className="px-6 py-3 bg-teal-600 hover:bg-teal-500 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-600/30 hover:scale-105">
               📥 Download Resume
             </a>
             <a href="#contact" className="px-6 py-3 border-2 border-gray-400 text-gray-300 font-semibold rounded-xl hover:bg-gray-600/10 transition-all duration-300 hover:shadow-lg hover:shadow-gray-600/20 hover:scale-105 relative group">
