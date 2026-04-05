@@ -12,6 +12,27 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Scroll animations with Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    document.querySelectorAll('.scroll-animate').forEach((el) => {
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-950 via-teal-950 to-slate-950 overflow-hidden">
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -45,6 +66,9 @@ export default function App() {
             <a href="#projects" className="px-6 py-3 bg-white hover:bg-gray-100 text-black rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:scale-105">
               View My Work
             </a>
+            <a href="resume.pdf" download className="px-6 py-3 bg-teal-600 hover:bg-teal-500 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-600/30 hover:scale-105">
+              📥 Download Resume
+            </a>
             <a href="#contact" className="px-6 py-3 border-2 border-gray-400 text-gray-300 font-semibold rounded-xl hover:bg-gray-600/10 transition-all duration-300 hover:shadow-lg hover:shadow-gray-600/20 hover:scale-105 relative group">
               <span className="absolute inset-0 bg-gray-600 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity"></span>
               <span className="relative">Get in Touch</span>
@@ -56,11 +80,11 @@ export default function App() {
       <section id="projects" className="px-6 py-16 md:py-24 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white scroll-animate animate-slide-up">Featured Projects</h2>
             <div className="h-1 w-24 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative">
+            <div className="group relative scroll-animate animate-slide-in-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300 group-hover:duration-200"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-2xl p-6 hover:border-gray-600/40 transition-all duration-300">
                 <div className="w-full h-48 bg-gradient-to-br from-gray-900/20 to-black/40 rounded-xl mb-6 flex items-center justify-center border border-gray-600/10 group-hover:border-gray-600/30 transition-colors">
@@ -78,7 +102,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative scroll-animate animate-slide-in-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300 group-hover:duration-200"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-2xl p-6 hover:border-gray-600/40 transition-all duration-300">
                 <div className="w-full h-48 bg-gradient-to-br from-gray-900/20 to-black/40 rounded-xl mb-6 flex items-center justify-center border border-gray-600/10 group-hover:border-gray-600/30 transition-colors">
@@ -96,7 +120,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative scroll-animate animate-slide-in-right">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300 group-hover:duration-200"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-2xl p-6 hover:border-gray-600/40 transition-all duration-300">
                 <div className="w-full h-48 bg-gradient-to-br from-gray-900/20 to-black/40 rounded-xl mb-6 flex items-center justify-center border border-gray-600/10 group-hover:border-gray-600/30 transition-colors">
@@ -114,7 +138,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group relative scroll-animate animate-slide-in-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-2xl opacity-0 group-hover:opacity-20 blur transition duration-300 group-hover:duration-200"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-2xl p-6 hover:border-gray-600/40 transition-all duration-300">
                 <div className="w-full h-48 bg-gradient-to-br from-gray-900/20 to-black/40 rounded-xl mb-6 flex items-center justify-center border border-gray-600/10 group-hover:border-gray-600/30 transition-colors">
@@ -134,16 +158,68 @@ export default function App() {
           </div>
         </div>
       </section>
+      <section className="px-6 py-16 md:py-24 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white scroll-animate animate-slide-up">Work Experience Timeline</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full"></div>
+          </div>
 
+          <div className="space-y-8">
+            <div className="scroll-animate animate-slide-in-left">
+              <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-3xl">🚀</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-1">Product Engineer (Current)</h3>
+                    <p className="text-teal-400 font-semibold mb-2">TCS FS Core Banking Division</p>
+                    <p className="text-gray-400 text-sm">2022 - Present | 3.6+ years</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Leading development of TCS BaNCS, a comprehensive banking solution serving global clients. Designing and implementing scalable REST and SOAP APIs for banking transactions, managing financial compliance requirements, and optimizing database performance for high-volume operations.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Spring</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">APIs</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Oracle</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="scroll-animate animate-slide-in-right">
+              <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-3xl">💼</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-1">Associate Developer</h3>
+                    <p className="text-teal-400 font-semibold mb-2">TCS FS Core Banking Division</p>
+                    <p className="text-gray-400 text-sm">2020 - 2022 | 2 years</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Developed and maintained frontend components and backend services for banking applications. Collaborated with cross-functional teams to implement features for payment processing, account management, and financial reporting systems.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">DB2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="about" className="px-6 py-16 md:py-24 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white scroll-animate animate-slide-up">About Me</h2>
             <div className="h-1 w-24 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 scroll-animate animate-slide-in-left">
               <p className="text-gray-300 leading-relaxed mb-6 text-lg">
                 I'm a <span className="text-white font-semibold">Product Engineer</span> with 3.5 years of experience at <span className="text-white font-semibold">TCS</span>, specializing in Core Banking solutions. I have built robust web applications and backend services for the financial sector, with deep expertise in full-stack development.
               </p>
@@ -152,7 +228,7 @@ export default function App() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-6 backdrop-blur-xl">
+            <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-6 backdrop-blur-xl scroll-animate animate-slide-in-right">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">3.6</div>
                 <p className="text-gray-300/80 text-sm">Years of Experience</p>
@@ -165,7 +241,7 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300">
+            <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300 scroll-animate animate-slide-in-left">
               <h3 className="text-2xl font-bold mb-6 text-white">Technical Skills</h3>
               <div className="space-y-4">
                 <div>
@@ -187,7 +263,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300">
+            <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300 scroll-animate animate-slide-in-right">
               <h3 className="text-2xl font-bold mb-6 text-white">Experience & Education</h3>
               <div className="space-y-4">
                 <div className="pb-4 border-b border-gray-600/20">
@@ -209,7 +285,7 @@ export default function App() {
       <section id="contact" className="px-6 py-16 md:py-24 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Let's Connect</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white scroll-animate animate-slide-up">Let's Connect</h2>
             <div className="h-1 w-24 bg-gradient-to-r from-gray-500 to-gray-400 rounded-full mx-auto mb-6"></div>
             <p className="text-gray-300 text-lg">
               Have a question or want to collaborate? I'd love to hear from you!
@@ -217,7 +293,7 @@ export default function App() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <a href="mailto:baranirinzz@gmail.com" className="group relative">
+            <a href="mailto:baranirinzz@gmail.com" className="group relative scroll-animate animate-slide-in-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-xl p-6 hover:border-gray-600/40 transition-all duration-300 text-center">
                 <div className="text-3xl mb-3">✉️</div>
@@ -227,7 +303,7 @@ export default function App() {
               </div>
             </a>
 
-            <a href="tel:+918124684550" className="group relative">
+            <a href="tel:+918124684550" className="group relative scroll-animate animate-slide-in-right">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-xl p-6 hover:border-gray-600/40 transition-all duration-300 text-center">
                 <div className="text-3xl mb-3">📱</div>
@@ -239,14 +315,14 @@ export default function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://github.com/Barani-Dharan-S" target="_blank" rel="noopener noreferrer" className="flex-1 group relative">
+            <a href="https://github.com/Barani-Dharan-S" target="_blank" rel="noopener noreferrer" className="flex-1 group relative scroll-animate animate-slide-in-left">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-xl px-6 py-4 hover:border-gray-600/40 transition-all duration-300 text-center font-semibold">
                 <span className="text-gray-300 group-hover:text-white transition-colors">🐙 GitHub</span>
               </div>
             </a>
 
-            <a href="https://linkedin.com/in/baranidharan-s-b20a53211" target="_blank" rel="noopener noreferrer" className="flex-1 group relative">
+            <a href="https://linkedin.com/in/baranidharan-s-b20a53211" target="_blank" rel="noopener noreferrer" className="flex-1 group relative scroll-animate animate-slide-in-right">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl opacity-0 group-hover:opacity-20 blur transition duration-300"></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-600/20 rounded-xl px-6 py-4 hover:border-gray-600/40 transition-all duration-300 text-center font-semibold">
                 <span className="text-gray-300 group-hover:text-white transition-colors">💼 LinkedIn</span>
