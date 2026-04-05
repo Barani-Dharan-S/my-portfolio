@@ -56,7 +56,7 @@ export default function App() {
                 Baranidharan S
               </h1>
               <p className="text-base md:text-lg text-gray-300 font-semibold">
-                System Engineer · TCS Core Banking · Full Stack Developer
+                System Engineer · Frontend & Middleware Developer · TCS Banking Solutions
               </p>
             </div>
           </div>
@@ -178,11 +178,13 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Currently working as System Engineer on TCS BaNCS core banking platform. Designing and implementing scalable REST and SOAP APIs for banking transactions, managing financial compliance requirements, and optimizing database performance for high-volume operations in the global fintech ecosystem.
+                  Currently working as System Engineer on TCS BaNCS core banking platform, developing full-stack solutions using frontend, middleware, and backend technologies. Building interactive user interfaces, implementing middleware services for inter-system communication, designing scalable REST and SOAP APIs for banking transactions, and managing financial compliance requirements. Optimizing end-to-end system performance for high-volume operations in the global fintech ecosystem.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Spring</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Middleware</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">APIs</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Oracle</span>
                 </div>
@@ -200,11 +202,13 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Contributed to core banking systems development with focus on backend services and API integrations. Collaborated with senior engineers on payment processing, account management, and financial reporting features for the TCS BaNCS platform.
+                  Contributed to core banking systems development across frontend, middleware, and backend layers. Collaborated with senior engineers building responsive user interfaces, developing middleware integration services, and implementing backend APIs for payment processing, account management, and financial reporting features in the TCS BaNCS platform.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Spring</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Middleware</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">DB2</span>
                 </div>
               </div>
@@ -221,10 +225,11 @@ export default function App() {
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Completed comprehensive technical training and onboarding at TCS. Developed foundational skills in Java, banking domain knowledge, and software development practices. Participated in live projects and gained hands-on experience with core banking systems and database technologies.
+                  Completed comprehensive technical training and onboarding at TCS covering full-stack development. Developed foundational skills in Java, JavaScript, banking domain knowledge, middleware concepts, and software development practices. Participated in live projects and gained hands-on experience with frontend development, core banking systems, middleware integration, and database technologies.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Core Banking</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">SQL</span>
                 </div>
@@ -243,10 +248,10 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="md:col-span-2 scroll-animate animate-slide-in-left">
               <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-                I'm a <span className="text-white font-semibold">System Engineer</span> with 3.6+ years of experience at <span className="text-white font-semibold">Tata Consultancy Services</span>, specializing in Core Banking solutions. I have built robust web applications and backend services for the financial sector, with deep expertise in full-stack development.
+                I'm a <span className="text-white font-semibold">System Engineer</span> with 3.6+ years of experience at <span className="text-white font-semibold">Tata Consultancy Services</span>, specializing in frontend and middleware development for core banking solutions. I build interactive user interfaces, implement middleware services for system integration, and develop robust backend APIs for the financial sector.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Currently contributing to <span className="text-white font-semibold">TCS BaNCS</span>, a comprehensive banking solution serving global clients. Driven by curiosity and passion for fintech innovation, I continuously explore emerging technologies to solve complex banking problems.
+                Currently contributing to <span className="text-white font-semibold">TCS BaNCS</span>, a comprehensive banking solution serving global clients. Driven by curiosity and passion for fintech innovation, I continuously explore emerging technologies to solve complex banking problems across the full technology stack.
               </p>
             </div>
             
@@ -268,11 +273,15 @@ export default function App() {
               <div className="space-y-4">
                 <div>
                   <p className="text-gray-300 font-semibold text-sm mb-2">Frontend</p>
-                  <p className="text-slate-400 text-sm">Java, XML, JavaScript, jQuery</p>
+                  <p className="text-slate-400 text-sm">JavaScript, React, HTML, CSS, jQuery, XML</p>
+                </div>
+                <div>
+                  <p className="text-gray-300 font-semibold text-sm mb-2">Middleware</p>
+                  <p className="text-slate-400 text-sm">Message Queues, ESB, API Integration, Service Orchestration</p>
                 </div>
                 <div>
                   <p className="text-gray-300 font-semibold text-sm mb-2">Backend</p>
-                  <p className="text-slate-400 text-sm">RESTful APIs, SOAP APIs, Spring, Hibernate, Struts</p>
+                  <p className="text-slate-400 text-sm">Java, RESTful APIs, SOAP APIs, Spring, Hibernate, Struts</p>
                 </div>
                 <div>
                   <p className="text-gray-300 font-semibold text-sm mb-2">Databases</p>
