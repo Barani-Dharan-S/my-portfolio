@@ -70,14 +70,10 @@ export default function App() {
                 <p className="text-slate-300 mb-6 text-sm leading-relaxed">
                   E-commerce product data extraction tool that scrapes product details and segregates them in Excel format. Simplifies retail marketing and product comparison.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Web Scraping</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Data Processing</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">Details →</a>
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">GitHub →</a>
                 </div>
               </div>
             </div>
@@ -92,14 +88,10 @@ export default function App() {
                 <p className="text-slate-300 mb-6 text-sm leading-relaxed">
                   Comprehensive banking solution designed for diverse financial requirements. Contributed to frontend and backend development for global clients.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Spring</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Oracle DB</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">About →</a>
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">Details →</a>
                 </div>
               </div>
             </div>
@@ -114,14 +106,10 @@ export default function App() {
                 <p className="text-slate-300 mb-6 text-sm leading-relaxed">
                   Designed and implemented scalable APIs for banking transactions and financial compliance. Expertise in both REST and SOAP protocols.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">RESTful APIs</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">SOAP</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Hibernate</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">Overview →</a>
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">Details →</a>
                 </div>
               </div>
             </div>
@@ -136,14 +124,10 @@ export default function App() {
                 <p className="text-slate-300 mb-6 text-sm leading-relaxed">
                   Optimized complex SQL queries for performance. Specialized in financial data management and compliance requirements.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Oracle</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">DB2</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">PostgreSQL</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">Case Study →</a>
-                  <a href="#" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">Details →</a>
                 </div>
               </div>
             </div>
