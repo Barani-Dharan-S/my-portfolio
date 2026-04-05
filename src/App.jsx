@@ -154,7 +154,7 @@ export default function App() {
             
             <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-6 backdrop-blur-xl">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">3.5</div>
+                <div className="text-4xl font-bold text-white mb-2">3.6</div>
                 <p className="text-gray-300/80 text-sm">Years of Experience</p>
                 <div className="mt-6 pt-6 border-t border-gray-600/20">
                   <div className="text-2xl font-bold text-white mb-1">TCS</div>
