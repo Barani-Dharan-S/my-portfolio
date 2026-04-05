@@ -56,7 +56,7 @@ export default function App() {
                 Baranidharan S
               </h1>
               <p className="text-base md:text-lg text-gray-300 font-semibold">
-                Product Engineer · TCS FS Core Banking · Full Stack Developer
+                System Engineer · TCS Core Banking · Full Stack Developer
               </p>
             </div>
           </div>
@@ -172,13 +172,13 @@ export default function App() {
                 <div className="flex items-start gap-4 mb-4">
                   <div className="text-3xl">🚀</div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-1">Product Engineer (Current)</h3>
-                    <p className="text-teal-400 font-semibold mb-2">TCS FS Core Banking Division</p>
-                    <p className="text-gray-400 text-sm">2022 - Present | 3.6+ years</p>
+                    <h3 className="text-2xl font-bold text-white mb-1">System Engineer</h3>
+                    <p className="text-teal-400 font-semibold mb-2">Tata Consultancy Services</p>
+                    <p className="text-gray-400 text-sm">Mar 2024 - Present | 2 yrs 2 mos</p>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Leading development of TCS BaNCS, a comprehensive banking solution serving global clients. Designing and implementing scalable REST and SOAP APIs for banking transactions, managing financial compliance requirements, and optimizing database performance for high-volume operations.
+                  Currently working as System Engineer on TCS BaNCS core banking platform. Designing and implementing scalable REST and SOAP APIs for banking transactions, managing financial compliance requirements, and optimizing database performance for high-volume operations in the global fintech ecosystem.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
@@ -194,18 +194,39 @@ export default function App() {
                 <div className="flex items-start gap-4 mb-4">
                   <div className="text-3xl">💼</div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-1">Associate Developer</h3>
-                    <p className="text-teal-400 font-semibold mb-2">TCS FS Core Banking Division</p>
-                    <p className="text-gray-400 text-sm">2020 - 2022 | 2 years</p>
+                    <h3 className="text-2xl font-bold text-white mb-1">Assistant System Engineer</h3>
+                    <p className="text-teal-400 font-semibold mb-2">Tata Consultancy Services</p>
+                    <p className="text-gray-400 text-sm">Jul 2023 - Feb 2024 | 8 mos</p>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Developed and maintained frontend components and backend services for banking applications. Collaborated with cross-functional teams to implement features for payment processing, account management, and financial reporting systems.
+                  Contributed to core banking systems development with focus on backend services and API integrations. Collaborated with senior engineers on payment processing, account management, and financial reporting features for the TCS BaNCS platform.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
-                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Spring</span>
                   <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">DB2</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="scroll-animate animate-slide-in-left">
+              <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-8 backdrop-blur-xl hover:border-gray-600/40 transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-3xl">🎓</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-1">Assistant System Engineer Trainee</h3>
+                    <p className="text-teal-400 font-semibold mb-2">Tata Consultancy Services</p>
+                    <p className="text-gray-400 text-sm">Jul 2022 - Jul 2023 | 1 yr 1 mo</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Completed comprehensive technical training and onboarding at TCS. Developed foundational skills in Java, banking domain knowledge, and software development practices. Participated in live projects and gained hands-on experience with core banking systems and database technologies.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Java</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">Core Banking</span>
+                  <span className="px-3 py-1 bg-gray-900/30 border border-gray-600/20 text-gray-300 rounded-full text-xs font-medium">SQL</span>
                 </div>
               </div>
             </div>
@@ -222,7 +243,7 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="md:col-span-2 scroll-animate animate-slide-in-left">
               <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-                I'm a <span className="text-white font-semibold">Product Engineer</span> with 3.5 years of experience at <span className="text-white font-semibold">TCS</span>, specializing in Core Banking solutions. I have built robust web applications and backend services for the financial sector, with deep expertise in full-stack development.
+                I'm a <span className="text-white font-semibold">System Engineer</span> with 3.6+ years of experience at <span className="text-white font-semibold">Tata Consultancy Services</span>, specializing in Core Banking solutions. I have built robust web applications and backend services for the financial sector, with deep expertise in full-stack development.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
                 Currently contributing to <span className="text-white font-semibold">TCS BaNCS</span>, a comprehensive banking solution serving global clients. Driven by curiosity and passion for fintech innovation, I continuously explore emerging technologies to solve complex banking problems.
@@ -231,11 +252,11 @@ export default function App() {
             
             <div className="bg-gradient-to-br from-purple-950/20 to-black/30 border border-gray-600/20 rounded-2xl p-6 backdrop-blur-xl scroll-animate animate-slide-in-right">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">3.6</div>
+                <div className="text-4xl font-bold text-white mb-2">3.6+</div>
                 <p className="text-gray-300/80 text-sm">Years of Experience</p>
                 <div className="mt-6 pt-6 border-t border-gray-600/20">
                   <div className="text-2xl font-bold text-white mb-1">TCS</div>
-                  <p className="text-gray-300/80 text-sm">Product Engineer</p>
+                  <p className="text-gray-300/80 text-sm">System Engineer</p>
                 </div>
               </div>
             </div>
